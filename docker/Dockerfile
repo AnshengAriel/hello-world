@@ -5,6 +5,7 @@ EXPOSE 7079
 
 WORKDIR /root
 
-ADD helloworld/*.jar /root/app.jar
+# 工作空间默认是Dockerfile文件所在目录
+ADD *.jar /root/app.jar
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
